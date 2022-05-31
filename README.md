@@ -141,10 +141,16 @@ Code Headers are the rules a script or a group has to follow, they are always de
 | disable-null	| Disables that every<br> variable can be of value<br> null, instead forces you<br> to use a "?" after the type<br> to declare it nullable.
 ## BuiltIn Methods
 BuiltIn Methods are methods which are built into the language without any extra package.
-| Name<span>space.</span>Name	| Effect	| Returns	|
+| Name	| Effect	| Returns	|
 | ---------		| ---------	| ---------	|
 | Print(dynamic value);	| Calls the values ToString method and <br> outputs the result to the screen. | null	|
 | Clock(TimingMethod method);	| Will return the time since the program<br>has started in the entered timing method.	| decimal	|
+## BuiltIn Objects
+BuiltIn Objects are objects which are built into the language without any extra package.
+| Name	| Description	| Type	|
+| ------| ------	| ------	|
+| TimingMethod	| The method used for time based events (MilliSeconds, Seconds, Minutes, etc.).	| Enum	|
+| Color		| A simple enum containing multiple color values.	| Enum	|
 ## Script Groups
 A script group is a file containing global standards for all scripts linked in the file, the first file being the entry pointm it uses the file extension `.ashg`, it can contain global [code headers](#code-headers) as well as global variables, it is structured like this: 
 ```
