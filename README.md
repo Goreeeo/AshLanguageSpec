@@ -27,6 +27,7 @@ Every single object in Ash is nullable, that can be disabled using the [code hea
 ### Raw Type List
 | Type		| Description |
 | --------- | ---------   |
+| dynamic	| A dynamic variable can hold any type. |
 | string 	| A string of characters. |
 | int 		| A number without decimals. |
 | uint 		| A non-negative number<br>without decimals. |
@@ -97,9 +98,10 @@ Code Headers are the rules a script or a group has to follow, they are always de
 | disable-null	| Disables that every<br> variable can be of value<br> null, instead forces you<br> to use a "?" after the type<br> to declare it nullable.
 ## BuiltIn Methods
 BuiltIn Methods are methods which are built into the language without any extra package.
-| Namespace.Name	| Effect	| Returns	|
+| Name<span>space.</span>Name	| Effect	| Returns	|
 | ---------		| ---------	| ---------	|
 | Print(dynamic value);	| Calls the values ToString method and <br> outputs the result to the screen. | null	|
+| Clock(TimingMethod method);	| Will return the time since the program<br>has started in the entered timing method.	| decimal	|
 ## Script Groups
 A script group is a file containing global standards for all scripts linked in the file, the first file being the entry pointm it uses the file extension `.ashg`, it can contain global [code headers](#code-headers) as well as global variables, it is structured like this: 
 ```
