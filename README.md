@@ -24,7 +24,8 @@ Every single object in Ash is nullable, that can be disabled using the [code hea
 ### Modifier List
 | Name		| Effect	 |
 | --------- | ---------- |
-| const 	| Declares a variable<br>as unchangeable and<br>constant.
+| const 	| Declares a variable<br>as unchangeable and<br>constant.	|
+| static	| Declares a variable to be accessible without being part of an instance.	|
 ### Raw Type List
 | Type		| Description |
 | --------- | ---------   |
