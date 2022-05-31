@@ -6,11 +6,12 @@ Ash is a compiled statically typed object oriented programming language targeted
 2. [Variable Accessing](#variable-accessing)
 3. [Function Definitions](#function-definitions)
 4. [Function Calls](#function-calls)
-5. [Loops](#loops)
-6. [Code Headers](#code-headers)
-7. [BuiltIn Methods](#builtin-methods)
-8. [Script Groups](#script-groups)
-9. [Package Manager](#package-manager)
+5. [Objects](#objects)
+6. [Loops](#loops)
+7. [Code Headers](#code-headers)
+8. [BuiltIn Methods](#builtin-methods)
+9. [Script Groups](#script-groups)
+10. [Package Manager](#package-manager)
 ## Variable Definitions
 A variable is defined using this order: ```<access_modifier(optional)> <modifiers(optional)> <type> <name> = <initializer(defaults to null)>```
 Every single object in Ash is nullable, that can be disabled using the [code header](#code-headers) `disable-null` though, if that is the case every object which you want to be nullable needs to have a "?" added after their type.
@@ -44,7 +45,7 @@ someVar.subProp.ToString();
 ## Function Definitions
 A function is a callable object which can execute code and return a value, a function declaration looks like this:
 ```
-function <name> <return_type(optional)> (<parameters>)
+<access_modifier(optional)> function <name> <return_type(optional)> (<parameters>)
 {
 	<code>
 }
@@ -52,7 +53,47 @@ function <name> <return_type(optional)> (<parameters>)
 
 You return something out of a function by using the `return`  keyword followed by the value you wish to return, this value can be anything if there is no return type else it has to follow it.
 ## Function Calls
-You call a function by entering it's name followed by brackets containing the arguments which could look like this: `SomeFunction("string", 9u, 11.23);`
+You call a function by entering it's name followed by brackets containing the arguments which could look like this: ```SomeFunction("string", 9u, 11.23);```
+## Objects
+An object is a container for other pieces of code, which can be used as a type.
+### Classes
+A class is basically just a collection of code, you can write inside of a class just like you would write outside of a class, this is because on startup, your file will automatically be wrapped inside a class, meaning they are virtually the same. This is how you declare a class:
+```
+<access_modifier(optional)> <modifiers(optional)> class <class_name> optional(of <base_class>) {
+	//Declare vars, functions and constructor here.
+}
+```
+#### Constructor
+A constructor gets called whenever you create a new class, inside of it can be coded just like in any other function, only difference being how you declare it, this is how to declare a constructor.
+```
+<access_modifier(optional)> <modifiers(optional)> <class_name>(<arguments(optional)>) {
+	//Code here
+}
+```
+### Structs
+A struct can only contain values and no functions (except for the constructor), a typical struct definition would look like this:
+```
+<access_modifier(optional)> <modifiers(optional)> struct <struct_name> optional(of <base_struct>) {
+	//Declare vars and constructor here.
+}
+```
+#### Constructor
+A constructor gets called whenever you create a new class, contrary to a classes constructor which lets you do whatever, a structs constructor requires you to initialize all the values of the struct inside of it (unless they are alreay initialized).
+```
+<access_modifier(optional)> <modifiers(optional)> <struct_name>(<arguments(optional)>) {
+	//Declare vars and constructor here.
+}
+```
+### Enums
+An enum can contain multiple values, each of them displayed with just a name, these values can also be converted into ordinals starting from 0.
+```
+<access_modifier(optional)> enum <enum_name> {
+	VALUE_1,
+	VALUE_2,
+	DIFFERENT_NAMED_VALUE,
+	etc.
+}
+```
 ## Loops
 A loop is a piece of code which repeats until a certain condition is met. There are three kind of loops in Ash. The "while", the "for" and the "foreach" loop. 
 ### While Loop
