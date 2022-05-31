@@ -28,6 +28,7 @@ Every single object in Ash is nullable, that can be disabled using the [code hea
 | Type		| Description |
 | --------- | ---------   |
 | dynamic	| A dynamic variable can hold any type. |
+| char		| A character.	|
 | string 	| A string of characters. |
 | int 		| A number without decimals. |
 | uint 		| A non-negative number<br>without decimals. |
