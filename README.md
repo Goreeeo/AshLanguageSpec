@@ -100,4 +100,4 @@ variables:
 package_dir: "package directory"
 ```
 ## Package Manager
-The package manager of Ash is called Lighter and is used to install user-made content from other people, a package will always have the file ending `.ashl` and can be installed using the `lighter i <package-name>` command, these packages can be accessed in your script like this: `use <package>`, installed packages will be contained in `lighter.json`, and can be reinstalled in a new project by just running `lighter i`.
+The package manager of Ash is called Lighter and is used to install user-made content from other people, a package will always have the file ending `.ashl` and can be installed using the `lighter i <package-name>` command, these packages can be accessed in your script like this: `use <package>`, installed packages will be contained in `packages.ltr`, and can be reinstalled in a new project by just running `lighter i`.
