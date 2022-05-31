@@ -8,8 +8,9 @@ Ash is a compiled statically typed object oriented programming language targeted
 4. [Function Calls](#function-calls)
 5. [Loops](#loops)
 6. [Code Headers](#code-headers)
-7. [Script Groups](#script-groups)
-8. [Package Manager](#package-manager)
+7. [BuiltIn Methods](#builtin-methods)
+8. [Script Groups](#script-groups)
+9. [Package Manager](#package-manager)
 ## Variable Definitions
 A variable is defined using this order: `<access_modifier(optional)> <modifiers(optional)> <type> <name> = <initializer(defaults to null)>`.
 Every single object in Ash is nullable, that can be disabled using the [code header](#code-headers) `disable-null` though, if that is the case every object which you want to be nullable needs to have a "?" added after their type.
@@ -94,6 +95,11 @@ Code Headers are the rules a script or a group has to follow, they are always de
 | Header	| Effect	|
 | --------- | --------- |
 | disable-null	| Disables that every<br> variable can be of value<br> null, instead forces you<br> to use a "?" after the type<br> to declare it nullable.
+## BuiltIn Methods
+BuiltIn Methods are methods which are built into the language without any extra package.
+| Namespace.Name	| Effect	| Returns	|
+| ---------		| ---------	| ---------	|
+| Print(dynamic value);	| Calls the values ToString method and <br> outputs the result to the screen. | null	|
 ## Script Groups
 A script group is a file containing global standards for all scripts linked in the file, the first file being the entry pointm it uses the file extension `.ashg`, it can contain global [code headers](#code-headers) as well as global variables, it is structured like this: 
 ```
