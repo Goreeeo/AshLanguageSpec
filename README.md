@@ -12,7 +12,7 @@ Ash is a compiled statically typed object oriented programming language targeted
 8. [Script Groups](#script-groups)
 9. [Package Manager](#package-manager)
 ## Variable Definitions
-A variable is defined using this order: `<access_modifier(optional)> <modifiers(optional)> <type> <name> = <initializer(defaults to null)>`.
+A variable is defined using this order: ```<access_modifier(optional)> <modifiers(optional)> <type> <name> = <initializer(defaults to null)>```
 Every single object in Ash is nullable, that can be disabled using the [code header](#code-headers) `disable-null` though, if that is the case every object which you want to be nullable needs to have a "?" added after their type.
 ### Access Modifier List
 | Name		| Description |
@@ -34,7 +34,7 @@ Every single object in Ash is nullable, that can be disabled using the [code hea
 | decimal 	| A number with decimals. |
 | bool 		| Can only contain true/false as a value. |
 
-A type can also be any object created in the language, for example `GraphicsWindow window = GraphicsWindow();` would be valid code.
+A type can also be any object created in the language, for example `GraphicsWindow window = GraphicsWindow();` would be valid code. If you follow up a type with `[]`, it will become an array, able to hold multiple values of the same type.
 ## Variable Accessing
 You access a variable by simply typing it's name, you can then access sub-properties such as child objects and methods from the object by seperating it  with a dot which could look like this:
 ```
