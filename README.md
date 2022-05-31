@@ -86,7 +86,7 @@ Code Headers are the rules a script or a group has to follow, they are always de
 | --------- | --------- |
 | disable-null	| Disables that every<br> variable can be of value<br> null, instead forces you<br> to use a "?" after the type<br> to declare it nullable.
 ## Script Groups
-A script group is a file containing lobal standards for all scripts linked in the file, it uses the file extension `.ashg`, it can contain global [code headers](#code-headers) as well as global variables, it is structured like this: 
+A script group is a file containing global standards for all scripts linked in the file, the first file being the entry pointm it uses the file extension `.ashg`, it can contain global [code headers](#code-headers) as well as global variables, it is structured like this: 
 ```
 scripts:
 	"script path",
@@ -100,4 +100,4 @@ variables:
 package_dir: "package directory"
 ```
 ## Package Manager
-The package manager of Ash is called Lighter and is used to install user-made content from other people, a package will always have the file ending `.ashl` and can be installed using the `lighter i <package-name>` command, these packages can be accessed like this: `use <package>`.
+The package manager of Ash is called Lighter and is used to install user-made content from other people, a package will always have the file ending `.ashl` and can be installed using the `lighter i <package-name>` command, these packages can be accessed in your script like this: `use <package>`, installed packages will be contained in `lighter.json`, and can be reinstalled in a new project by just running `lighter i`.
