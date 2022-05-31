@@ -10,8 +10,9 @@ Ash is a compiled statically typed object oriented programming language targeted
 6. [Loops](#loops)
 7. [Code Headers](#code-headers)
 8. [BuiltIn Methods](#builtin-methods)
-9. [Script Groups](#script-groups)
-10. [Package Manager](#package-manager)
+9. [BuiltIn Objects](#builtin-objects)
+10. [Script Groups](#script-groups)
+11. [Package Manager](#package-manager)
 ## Variable Definitions
 A variable is defined using this order: ```<access_modifier(optional)> <modifiers(optional)> <type> <name> = <initializer(defaults to null)>```
 Every single object in Ash is nullable, that can be disabled using the [code header](#code-headers) `disable-null` though, if that is the case every object which you want to be nullable needs to have a "?" added after their type.
