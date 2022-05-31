@@ -3,11 +3,13 @@ Ash is a compiled statically typed object oriented programming language targeted
 
 ## Contents
 1. [Variable Definitions](#variable-definitions)
-2. [Function Definitions](#function-definitions)
-3. [Loops](#loops)
-4. [Code Headers](#code-headers)
-5. [Script Groups](#script-groups)
-6. [Package Manager](#package-manager)
+2. [Variable Accessing](#variable-accessing)
+3. [Function Definitions](#function-definitions)
+4. [Function Calls](#function-calls)
+5. [Loops](#loops)
+6. [Code Headers](#code-headers)
+7. [Script Groups](#script-groups)
+8. [Package Manager](#package-manager)
 ## Variable Definitions
 A variable is defined using this order: `<access_modifier(optional)> <modifiers(optional)> <type> <name> = <initializer(defaults to null)>`.
 Every single object in Ash is nullable, that can be disabled using the [code header](#code-headers) `disable-null` though, if that is the case every object which you want to be nullable needs to have a "?" added after their type.
@@ -31,6 +33,11 @@ Every single object in Ash is nullable, that can be disabled using the [code hea
 | bool 		| Can only contain true/false as a value. |
 
 A type can also be any object created in the language, for example `GraphicsWindow window = GraphicsWindow();` would be valid code.
+## Variable Accessing
+You access a variable by simply typing it's name, you can then access sub-properties such as child objects and methods from the object by seperating it  with a dot which could look like this:
+```
+someVar.subProp.ToString();
+```
 ## Function Definitions
 A function is a callable object which can execute code and return a value, a function declaration looks like this:
 ```
@@ -41,6 +48,8 @@ function <name> <return_type(optional)> (<parameters>)
 ```
 
 You return something out of a function by using the `return`  keyword followed by the value you wish to return, this value can be anything if there is no return type else it has to follow it.
+## Function Calls
+You call a function by entering it's name followed by brackets containing the arguments which could look like this: `SomeFunction("string", 9u, 11.23);`
 ## Loops
 A loop is a piece of code which repeats until a certain condition is met. There are three kind of loops in Ash. The "while", the "for" and the "foreach" loop. 
 ### While Loop
