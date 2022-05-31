@@ -1,4 +1,3 @@
-
 | Function		| Effect	| Returns	|
 | --------			| --------- | --------- 	|
 | OutLine(Color color = ConsoleColor.Current, <br>Color bg = ConsoleColor.Background)		| Basically [Print()](https://github.com/Goreeeo/AshLanguageSpec/blob/main/README.md#builtin-methods) but expanded with more options.	| null	|
@@ -8,6 +7,6 @@
 | ConsoleColor.SetColor(Color color) 	| Sets the ConsoleColor.Current value to the new color.	| null	|
 | ConsoleColor.SetBGColor(Color color)	| Sets the ConsoleColor.Background value to the new color.	| null	|
 
-| Object	| Description	|
-| --------- | --------- |
-| ConsoleColor	| A static class containing values like the current console color and background color.	|
+| Object	| Description	| Type |
+| --------- | --------- | --------- |
+| ConsoleColor	| A static class containing values like the current console color and background color.	| Class 	|
