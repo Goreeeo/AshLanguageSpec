@@ -142,7 +142,6 @@ Code Headers are the rules a script or a group has to follow, they are always de
 ### Code Header List
 | Header	| Effect	|
 | --------- | --------- |
-| disable-null	| Disables that every<br> variable can be of value<br> null, instead forces you<br> to use a "?" after the type<br> to declare it nullable.
 ## BuiltIn Methods
 BuiltIn Methods are methods which are built into the language without any extra package.
 | Name	| Effect	| Returns	|
