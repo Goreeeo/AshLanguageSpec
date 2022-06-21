@@ -119,8 +119,8 @@ A for loop will repeat until the integer defined in it's condition reaches the t
 ```
 for (i = 1; (Define start amount.) i <= 7; (Stop when this target is reached.) i++ (Increment i by 1 after the loop.)
 {
-	if (i == 2) print 2;
-	if (i == 7) print "Done";
+	if (i == 2) Print(2);
+	if (i == 7) Print("Done");
 }
 ```
 A for loop can be stopped at any time using `break`or continue to the next iteration using `continue`.
@@ -132,7 +132,7 @@ int[] array = {1, 2};
 
 foreach(element in array) 
 {
-	print element;
+	Print(element);
 }
 ```
 Just like a for loop, this one can be stopped using `break` or continued to the next iteration using `continue`.
